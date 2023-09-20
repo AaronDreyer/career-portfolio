@@ -1,48 +1,75 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from 'react';
 
-import Carousel from 'react-bootstrap/Carousel';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import placeholder from '../components/placeholderimage.png';
 
 export default function Projects() {
   return (
-    <div style={{ display: 'block', width: 700, padding: 30 }}>
-    <Carousel>
-      <Carousel.Item>
-      <img
-            className="d-block w-100"
-src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
-            alt="Image One"
-          />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img
-            className="d-block w-100"
-src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
-            alt="Image One"
-          />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-      <img
-            className="d-block w-100"
-src="https://media.geeksforgeeks.org/wp-content/uploads/20210425122739/2-300x115.png"
-            alt="Image One"
-          />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
-    </div>
+    <Container fluid className="mt-3 mb-3">
+      <Row className="mb-3">
+        <Col>
+        <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />
+        </Col>
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
+          <h2>Project 1</h2>
+          <p>Short Description</p>
+          <Button>Click Me</Button>
+          </div>
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
+          <h2>Project 1</h2>
+          <p>Short Description</p>
+          <Button>Click Me</Button>
+          </div>
+        </Col>
+        <Col>
+        <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col>
+        <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />
+        </Col>
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
+          <h2>Project 1</h2>
+          <p>Short Description</p>
+          <Button>Click Me</Button>
+          </div>
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
+          <h2>Project 1</h2>
+          <p>Short Description</p>
+          <Button>Click Me</Button>
+          </div>
+        </Col>
+        <Col>
+        <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />
+        </Col>
+      </Row>
+      <Row className="mb-3">
+        <Col>
+        <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />
+        </Col>
+        <Col className="d-flex align-items-center justify-content-center">
+          <div>
+          <h2>Project 1</h2>
+          <p>Short Description</p>
+          <Button>Click Me</Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
