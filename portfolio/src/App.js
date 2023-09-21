@@ -4,20 +4,25 @@ import React from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
-// import Modals from './components/Modals';
-// import Contact from './components/Contact';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-function App() {
+export default function App() {
+
+
+
+  const mainBackgroundColor = {
+    backgroundColor: '#FFFFFF',
+  };
 
   return (
-    <div className="App">
+    <div className="App" style={mainBackgroundColor}>
       <Header />
       <About />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );
 }
 
-export default App;

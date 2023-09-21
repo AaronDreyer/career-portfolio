@@ -8,8 +8,14 @@ import Button from 'react-bootstrap/Button';
 import placeholder from '../components/placeholderimage.png';
 
 export default function Projects() {
+
+  const Projects = {
+    paddingTop: '100px',
+  }
+
   return (
-    <Container fluid className="mt-3 mb-3">
+    <Container fluid className="mt-3 mb-3" id="projects" style={Projects}>
+      <h1 className="mb-5">Projects</h1>
       <Row className="mb-3">
         <Col>
         <img style={{ height: '300px' }} src={placeholder} alt="placeholder" />

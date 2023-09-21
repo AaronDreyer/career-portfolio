@@ -2,11 +2,21 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function Contact() {
+
+  const ContactMe = {
+    paddingTop: '250px',
+    paddingBottom: '200px',
+  }
+
+
   return (
-    <div>
-    <h1>Contact Me</h1>
+    <Row id="contact" style={ContactMe} className="w-75 mx-auto">
+      <h1>Contact Me</h1>
+      <Col>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Name</Form.Label>
@@ -24,6 +34,7 @@ export default function Contact() {
         Submit
       </Button>
     </Form>
-    </div>
+    </Col>
+    </Row>
   );
 }
