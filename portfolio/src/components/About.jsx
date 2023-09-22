@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,9 +14,19 @@ export default function About () {
 
     const [show, setShow] = useState(false);
 
+    useEffect(() => {
+      // When the modal is opened, add the no-scroll class to the body
+      if (show) {
+        document.body.classList.add('no-scroll');
+      } else {
+        // When the modal is closed, remove the no-scroll class from the body
+        document.body.classList.remove('no-scroll');
+      }
+    }, [show]);
+
 
     const AboutMe = {
-        paddingTop: '150px',
+        paddingTop: '120px',
         paddingBottom: '130px',
         backgroundColor: '#4B663B',
         position: 'relative',
@@ -40,8 +50,9 @@ export default function About () {
 
       const Buttons = {
         backgroundColor: '#5F8356',
-        border: '1px solid #4A622C'
+        border: '1px solid #4A622C',
       }
+
       
       const Modals = {
         border: '1px solid #4A622C'
@@ -59,7 +70,8 @@ export default function About () {
                         <h2 className="text-white" style={Quote}>Motivated college graduate looking for opportunities in Web Development!</h2>
                     </Col>
                     <Col className="mt-3">
-                    <Button style={Buttons} className="mx-auto font-weight-bold shadow-lg" variant="light" onClick={() => setShow(true)}>
+                    <Button style={Buttons} className="mx-auto font-weight-bold shadow-lg button-hover-effect" variant="light" onClick={() => setShow(true)}
+                    >
                         <h3 className="text-dark font-weight-bold">About Me!</h3>
                     </Button>
 
@@ -68,7 +80,7 @@ export default function About () {
                         show={show}
                         onHide={() => setShow(false)}
                         dialogClassName="modal-90w"
-                        aria-labelledby="example-custom-modal-styling-title">
+                        aria-labelledby="example-custom-modal-styling-title" centered>
                         <Modal.Header closeButton>
                             <Modal.Title id="example-custom-modal-styling-title">
                             A little about me...

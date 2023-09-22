@@ -1,17 +1,12 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  /* index.css */
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 .home-hero__mouse-scroll-cont {
   position: absolute;
@@ -49,6 +44,24 @@ code {
       to {
         opacity: 0;
         top: 27px; } }
+
+
+
+        /* App.css */
+
+/* Add a class for the hover effect */
+button.button-hover-effect {
+  transition: transform 0.1s ease-in-out; /* Smooth transition */
+}
+
+.button-hover-effect:hover {
+  transform: scale(1.05); /* Smooth transition */
+}
+
+.no-scroll {
+  overflow: hidden !important; /* Ensure that the scrollbar remains visible */
+}
+
 /* 399F2E
  49B51F
  62CD32
