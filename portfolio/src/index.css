@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.hr-white {
+  background-color: white !important;
+}
+
 
 .home-hero__mouse-scroll-cont {
   position: absolute;
@@ -46,25 +50,13 @@ body {
         top: 27px; } }
 
 
+        .image-hover:hover {
+          opacity: 0.7;
+        }
 
-        /* App.css */
+        .custom-active {
+          background-color: #4B663B; 
+          color: white;
+        }
 
-/* Add a class for the hover effect */
-button.button-hover-effect {
-  transition: transform 0.1s ease-in-out; /* Smooth transition */
-}
-
-.button-hover-effect:hover {
-  transform: scale(1.05); /* Smooth transition */
-}
-
-.no-scroll {
-  overflow: hidden !important; /* Ensure that the scrollbar remains visible */
-}
-
-/* 399F2E
- 49B51F
- 62CD32
- D3D3D3
- 626363
- 2B2B2B*/
+        

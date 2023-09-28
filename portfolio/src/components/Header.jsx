@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import Image from 'react-bootstrap/Image';
 import profilePic from '../components/17-Aaron Dreyer.png';
 
@@ -34,7 +35,7 @@ export default function Header() {
   return (
     <Navbar bg="white" data-bs-theme="light" style={navbarStyle}>
       <Container fluid>
-        <Navbar.Brand className="m-4" href="#home">
+        <Navbar.Brand className="font-weight-bold m-4" href="#home">
           <Image style={imageStyle} src={profilePic} alt="Profilepic" roundedCircle />
           Aaron Dreyer
         </Navbar.Brand>
@@ -47,19 +48,59 @@ export default function Header() {
             Home
           </Nav.Link>
           <Nav.Link
+            className={`m-4 text-dark ${activeLink === 'about' ? 'active' : ''}`}
+            href="#about"
+            onClick={(event) => scrollToSection(event, 'about')}
+          >
+            About
+          </Nav.Link>
+          <Nav.Link
             className={`m-4 text-dark ${activeLink === 'skills' ? 'active' : ''}`}
             href="#skills"
             onClick={(event) => scrollToSection(event, 'skills')}
           >
             Skills
           </Nav.Link>
-          <Nav.Link
-            className={`m-4 text-dark ${activeLink === 'projects' ? 'active' : ''}`}
+        
+          <NavDropdown title="Projects" id="basic-nav-dropdown" className="m-4 text-dark">
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'projects' }`}
             href="#projects"
-            onClick={(event) => scrollToSection(event, 'projects')}
-          >
-            Projects
-          </Nav.Link>
+            onClick={(event) => scrollToSection(event, 'projects')}>
+                Projects
+              </NavDropdown.Item>
+
+              <NavDropdown.Divider />
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'memegenerator' }`}
+            href="#memegenerator"
+            onClick={(event) => scrollToSection(event, 'memegenerator')}>Meme Generator</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'cloudcalorie' }`}
+            href="#cloudcalorie"
+            onClick={(event) => scrollToSection(event, 'cloudcalorie')}>CloudCalorie</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'codecollab' }`}
+            href="#codecollab"
+            onClick={(event) => scrollToSection(event, 'codecollab')}>CodeCollab</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'codequiz' }`}
+            href="#codequiz"
+            onClick={(event) => scrollToSection(event, 'codequiz')}>Mega Code Quiz</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'workday' }`}
+            href="#workday"
+            onClick={(event) => scrollToSection(event, 'workday')}>Work Day Scheduler</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'pwa' }`}
+            href="#pwa"
+            onClick={(event) => scrollToSection(event, 'pwa')}>PWA Text Editor</NavDropdown.Item>
+
+              <NavDropdown.Item className={`text-dark custom-active ${activeLink === 'teamgenerator' }`}
+            href="#teamgenerator"
+            onClick={(event) => scrollToSection(event, 'teamgenerator')}>Team Generator</NavDropdown.Item>
+
+            </NavDropdown>
+
           <Nav.Link
             className={`m-4 text-dark ${activeLink === 'contact' ? 'active' : ''}`}
             href="#contact"

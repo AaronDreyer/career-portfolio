@@ -2,20 +2,34 @@ import React from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 export default function Contact() {
 
   const ContactMe = {
-    paddingTop: '250px',
+    paddingTop: '150px',
     paddingBottom: '200px',
   }
 
+  const Space = {
+    backgroundColor: '#32502B',
+    height: '4px',
+    border: 'solid #32502B',
+    fontSize: '18px',
+  };
+
 
   return (
-    <Row id="contact" style={ContactMe} className="w-75 mx-auto">
+    <Container id="contact" style={ContactMe} className="w-75 mx-auto">
       <h1>Contact Me</h1>
+      <Row>
+          <Col>
+            <hr style={Space} className="mx-auto w-25" />
+          </Col>
+      </Row>
+      <Row>
       <Col>
     <Form>
       <Form.Group className="mb-3" controlId="formBasicName">
@@ -36,5 +50,6 @@ export default function Contact() {
     </Form>
     </Col>
     </Row>
+    </Container>
   );
 }
