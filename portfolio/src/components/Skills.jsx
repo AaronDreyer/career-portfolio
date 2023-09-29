@@ -15,7 +15,7 @@ import ReactIcon from './images/react.png';
 export default function Skills () {
 
     const Skilled = {
-        paddingTop: '80px',
+        paddingTop: '100px',
     };
 
     const Images = {

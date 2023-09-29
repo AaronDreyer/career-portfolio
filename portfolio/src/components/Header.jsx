@@ -9,7 +9,7 @@ import profilePic from '../components/17-Aaron Dreyer.png';
 
 export default function Header() {
   const navbarStyle = {
-    height: '80px',
+    height: '100px',
     position: 'fixed',
     top: '0',
     width: '100%',
@@ -32,14 +32,24 @@ export default function Header() {
     setActiveLink(sectionId);
   };
 
+  const navbarToggle = document.querySelector('.navbar-toggler');
+    if (navbarToggle) {
+      navbarToggle.click();
+    }
+  
+
   return (
-    <Navbar bg="white" data-bs-theme="light" style={navbarStyle}>
+    <Navbar bg="white" data-bs-theme="light" style={navbarStyle} expand="md">
       <Container fluid>
         <Navbar.Brand className="font-weight-bold m-4" href="#home">
           <Image style={imageStyle} src={profilePic} alt="Profilepic" roundedCircle />
           Aaron Dreyer
         </Navbar.Brand>
-        <Nav variant="underline" defaultActiveKey="/home">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  
+        <Navbar.Collapse id="responsive-navbar-nav">
+
+        <Nav className="custom-navbar" variant="underline" defaultActiveKey="/home">
           <Nav.Link
             className={`m-4 text-dark ${activeLink === 'home' ? 'active' : ''}`}
             href="#home"
@@ -109,7 +119,8 @@ export default function Header() {
             Contact
           </Nav.Link>
         </Nav>
-      </Container>
+        </Navbar.Collapse>
+        </Container>
     </Navbar>
   );
 }

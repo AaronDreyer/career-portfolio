@@ -39,6 +39,8 @@ export default function Projects() {
     margin: '3px',
   }
 
+  
+
   return (
     <Container fluid className="mt-3 mb-3" id="projects" style={Projects}>
       <h1>Projects</h1>
@@ -49,15 +51,19 @@ export default function Projects() {
       </Row>
 
       <Row id="memegenerator" className='pt-3 pb-3'>
-        <Col xs={6}>
+        <Col className="mt-5" xs={6}>
         <img style={Images} src={project1example} alt="placeholder" />
         </Col>
         <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+          <div className="w-75">
           <h2>Meme Generator</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This project is a meme generator using two server-side APIs: a random meme image generator and a random funny advice text generator. We used both of the APIs to combine into a image/text meme generator that a user can save to local storage to retrieve at a later time.</p>
+          <a href="https://github.com/cbarnes0/Meme-Generator" alt="memegenerator">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
+          <a href="https://cbarnes0.github.io/Meme-Generator/" alt="memegenerator">
+          <Button className="button-hover" style={Buttons}>Live Page</Button>
+          </a>
           </div>
         </Col>
       </Row>
@@ -72,9 +78,13 @@ export default function Projects() {
       <Col xs={6} className="d-flex align-items-center justify-content-center">
           <div className="w-50">
           <h2>CloudCalorie</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This application allows you to easily track your daily calorie intake. CloudCalorie allows you to create a profile and track your daily calories and save your progress.</p>
+          <a href="https://github.com/AaronDreyer/CloudCalorie" alt="cloudcalorie">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
+          <a href="https://cloudcalorie.herokuapp.com/login" alt="cloudcalorie">
+          <Button className="button-hover" style={Buttons}>Live Page</Button>
+          </a>
           </div>
         </Col>
         <Col xs={6}>
@@ -93,11 +103,16 @@ export default function Projects() {
         <img style={Images} src={project3example} alt="placeholder" />
         </Col>
         <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+          <div className="w-75">
           <h2>CodeCollab</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This is a bootcamp continuation blog!
+            Join our bootcamp blog. Connect with alumni, share resources. Create an account for curated coding content, industry insights. Inclusive community supports your journey. Discover advice, success stories, discuss trends. You can gain access to this blog by signing up and signing in.</p>
+          <a href="https://github.com/blairrrrwho/codecollab" alt="codecollab">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
+          <a href="https://codecollab-for-developers.herokuapp.com/" alt="codecollab">
+          <Button className="button-hover" style={Buttons}>Live Page</Button>
+          </a>
           </div>
         </Col>
       </Row>
@@ -109,12 +124,16 @@ export default function Projects() {
       </Row>
 
       <Row id="codequiz" className='pt-3 pb-3'>
-      <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+      <Col xs={6} className="mt-5 d-flex align-items-center justify-content-center">
+          <div className="w-75">
           <h2>Mega Code Quiz</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This is a quiz about coding using html, css, and javascript. The main portion of the javascript is centered around Web APIs and uses the DOM to create a functioning multiple choice quiz with a point system, time limit, and highscore log. The quiz must feature several questions that need to be answered in within a time limit. However any missed question will deduct a certain amount of time. The score in which you get will be the time left in the counter. This score must then be logged to the website and be viewed by the user.</p>
+          <a href="https://github.com/AaronDreyer/mega-code-quiz" alt="megacodequiz">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
+          <a href="https://aarondreyer.github.io/mega-code-quiz/" alt="megacodequiz">
+          <Button className="button-hover" style={Buttons}>Live Page</Button>
+          </a>
           </div>
         </Col>
         <Col xs={6}>
@@ -128,16 +147,20 @@ export default function Projects() {
           </Col>
       </Row>
 
-      <Row id="workday" className='pt-3 pb-3'>
+      <Row id="workday" className='pt-3 pb-5'>
       <Col xs={6}>
         <img style={Images} src={project5example} alt="placeholder" />
         </Col>
         <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+          <div className="w-75">
           <h2>Work Day Scheduler</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This is a workday scheduler that allows the user to see the current local time and type there schedule using time blocks based on a 9 hour day (9am - 5pm). These time blocks have a text area and save button so the user can type their schedule in based on the hour they are wanting to have it completed/reminded and save it to the browsers local storage.</p>
+          <a href="https://github.com/AaronDreyer/your-daily-schedule" alt="workdayscheduler">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
+          <a href="https://aarondreyer.github.io/your-daily-schedule/" alt="workdayscheduler">
+          <Button className="button-hover" style={Buttons}>Live Page</Button>
+          </a>
           </div>
         </Col>
       </Row>
@@ -150,11 +173,12 @@ export default function Projects() {
 
       <Row id="pwa" className='pt-3 pb-3'>
       <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+          <div className="w-75">
           <h2>PWA Text Editor</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This is a challenge for the Georgia Tech Coding Bootcamp to use refactor starter code to produce a PWA application that presents itself as a text editor. This challenge demonstartes the ability to use PWAs to create an application and operate it without local connection.</p>
+          <a href="https://github.com/AaronDreyer/pwa-text-editor" alt="pwatexteditor">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
           </div>
         </Col>
         <Col xs={6}>
@@ -168,16 +192,17 @@ export default function Projects() {
           </Col>
       </Row>
 
-      <Row id="teamgenerator" className='pt-3 pb-3'>
+      <Row id="teamgenerator" className='mt-5 pt-3 pb-3'>
       <Col xs={6}>
         <img style={Images} src={project7example} alt="placeholder" />
         </Col>
         <Col xs={6} className="d-flex align-items-center justify-content-center">
-          <div className="w-50">
+          <div className="w-75">
           <h2>Team Generator</h2>
-          <p>"The curious cat explored the lush garden, its whiskers twitching with every new scent it discovered."</p>
-          <Button style={Buttons}>Repository</Button>
-          <Button style={Buttons}>Live Page</Button>
+          <p>This project is a webpage generator that creates individual employee cards. These cards display the employees name, role in the team, ID number, and email. Depending on what employee role that is chosen, there is other input fields to add to the card. Engineers get a github username, Managers get an office number, and Interns get there school displayed. This helps show who is in a team, what they specifically do, how to reach out to them, and details about them.</p>
+          <a href="https://github.com/AaronDreyer/oop-team-generator#oop-team-generator" alt="teamgenerator">
+          <Button className="button-hover" style={Buttons}>Repository</Button>
+          </a>
           </div>
         </Col>
       </Row>

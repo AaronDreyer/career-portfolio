@@ -54,9 +54,43 @@ body {
           opacity: 0.7;
         }
 
+        .button-hover:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        }        
+
         .custom-active {
           background-color: #4B663B; 
           color: white;
         }
 
-        
+.navbar-toggler-icon {
+  color: #fff;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+.navbar-nav .nav-link {
+  font-size: 15px;
+}
+
+.custom-navbar {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  background-color: #fff; 
+}
+
+.navbar-nav .nav-link {
+  color: #333; 
+}
+
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  background-color: #fff; 
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+  color: #fff; 
+}

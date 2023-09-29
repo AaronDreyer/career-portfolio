@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 export default function About () {
 
     const About = {
-        paddingTop: "80px",
+        paddingTop: "100px",
     };
 
     const Paragraph = {

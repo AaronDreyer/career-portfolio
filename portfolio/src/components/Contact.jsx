@@ -1,4 +1,6 @@
 import React from 'react';
+import {useRef} from 'react';
+import emailjs from '@emailjs/browser';
 
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -10,7 +12,7 @@ export default function Contact() {
 
   const ContactMe = {
     paddingTop: '150px',
-    paddingBottom: '200px',
+    paddingBottom: '100px',
   }
 
   const Space = {
@@ -20,6 +22,25 @@ export default function Contact() {
     fontSize: '18px',
   };
 
+  const inputStyle = {
+    fontSize: '17px',
+    height: '150px',   
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+
+  emailjs.sendForm('service_0rjvgwb', 'template_da9h8kn', form.current, 'VtMXAlTH4RXVN3fa3')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset()
+  };
 
   return (
     <Container id="contact" style={ContactMe} className="w-75 mx-auto">
@@ -31,20 +52,37 @@ export default function Contact() {
       </Row>
       <Row>
       <Col>
-    <Form>
+    <Form ref={form} onSubmit={sendEmail}>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Name</Form.Label>
-        <Form.Control type="name" placeholder="Enter name" />
+        <Form.Control 
+                type="name"
+                name="user_name"
+                placeholder="Enter name"/>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
-        <Form.Control type="name" placeholder="Enter email" />
+        <Form.Control 
+                type="email"
+                name-="user_email"
+                placeholder="Enter email"/>
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicSubject">
+        <Form.Label>Subject</Form.Label>
+        <Form.Control 
+                type="subject"
+                placeholder="Enter subject"/>
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicMessage">
         <Form.Label>Message</Form.Label>
-        <Form.Control type="message" placeholder="Message" />
+        <Form.Control 
+                as="textarea"
+                rows={4}
+                name="message"
+                placeholder="Message"
+                style={inputStyle} />
       </Form.Group>
-      <Button variant="primary" type="submit">
+      <Button variant="primary" type="submit" value="Send">
         Submit
       </Button>
     </Form>

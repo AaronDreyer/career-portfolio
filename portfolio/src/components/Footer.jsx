@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Github } from 'react-bootstrap-icons';
+import { Github, Linkedin, Mailbox2, Steam } from 'react-bootstrap-icons';
 
 export default function Footer () {
 
@@ -15,13 +15,22 @@ export default function Footer () {
         <Container style={Footer} className="w-100" fluid>
             <Row>
                 <Col xs={6}>
-                    <h4 className="text-white">@ Aaron Dreyer - 2023</h4>
+                <p className="text-white m-2">@ Aaron Dreyer - 2023</p>
                 </Col>
                 <Col xs={6}>
-                      <a href="https://github.com/AaronDreyer">
-                      <Github size={40} className="text-white image-hover" />
+                    <a href="https://github.com/AaronDreyer">
+                      <Github size={40} className="text-white image-hover mx-3" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/aarondreyer/">
+                      <Linkedin size={40} className="text-white image-hover mx-3" />
                       </a>
-                    </Col>
+                      <a href="mailto:aaronottaway@gmail.com">
+                      <Mailbox2 size={40} className="text-white image-hover mx-3" />
+                      </a>
+                      <a href="https://steamcommunity.com/profiles/76561199486859938/">
+                      <Steam size={40} className="text-white image-hover mx-3" />
+                      </a>
+                </Col>
             </Row>
         </Container>
     )
