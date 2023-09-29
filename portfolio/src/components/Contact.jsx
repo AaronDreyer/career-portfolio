@@ -27,6 +27,12 @@ export default function Contact() {
     height: '150px',   
   };
 
+  const Buttons = {
+    backgroundColor: '#4B663B',
+    border: 'none',
+    margin: '3px',
+  }
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -82,7 +88,7 @@ export default function Contact() {
                 placeholder="Message"
                 style={inputStyle} />
       </Form.Group>
-      <Button variant="primary" type="submit" value="Send">
+      <Button className="button-hover" style={Buttons} variant="primary" type="submit" value="Send">
         Submit
       </Button>
     </Form>

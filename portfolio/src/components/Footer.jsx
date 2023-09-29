@@ -8,16 +8,16 @@ export default function Footer () {
 
     const Footer = {
         backgroundColor: '#4B663B',
-        padding: '25px',
+        padding: '30px',
       };
 
     return (
         <Container style={Footer} className="w-100" fluid>
             <Row>
-                <Col xs={6}>
+                <Col xs={6} md={6} lg={6} className="d-flex justify-content-start align-items-center">
                 <p className="text-white m-2">@ Aaron Dreyer - 2023</p>
                 </Col>
-                <Col xs={6}>
+                <Col xs={6} md={6} lg={6} className="d-flex justify-content-end align-items-center">
                     <a href="https://github.com/AaronDreyer">
                       <Github size={40} className="text-white image-hover mx-3" />
                     </a>

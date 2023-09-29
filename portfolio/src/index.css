@@ -50,19 +50,19 @@ body {
         top: 27px; } }
 
 
-        .image-hover:hover {
-          opacity: 0.7;
-        }
+.image-hover:hover {
+  opacity: 0.7;
+}
 
-        .button-hover:hover {
-          transform: scale(1.05);
-          transition: transform 0.3s ease;
-        }        
+.button-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}        
 
-        .custom-active {
-          background-color: #4B663B; 
-          color: white;
-        }
+.custom-active {
+  background-color: #4B663B; 
+  color: white;
+}
 
 .navbar-toggler-icon {
   color: #fff;

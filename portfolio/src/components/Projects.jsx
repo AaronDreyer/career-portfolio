@@ -68,7 +68,7 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <Row>
+      <Row id="cloudcalorie">
           <Col>
             <hr style={Space} className="mx-auto w-25" />
           </Col>
@@ -92,13 +92,13 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <Row>
+      <Row id="codecollab" className="pb-3">
           <Col>
             <hr style={Space} className="mx-auto w-25" />
           </Col>
       </Row>
 
-      <Row id="codecollab" className='pt-3 pb-3'>
+      <Row className='pt-3 pb-3 mt-3'>
       <Col xs={6}>
         <img style={Images} src={project3example} alt="placeholder" />
         </Col>
@@ -117,13 +117,13 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <Row>
+      <Row id="codequiz">
           <Col>
             <hr style={Space} className="mx-auto w-25" />
           </Col>
       </Row>
 
-      <Row id="codequiz" className='pt-3 pb-3'>
+      <Row className='pt-3 pb-3'>
       <Col xs={6} className="mt-5 d-flex align-items-center justify-content-center">
           <div className="w-75">
           <h2>Mega Code Quiz</h2>
@@ -165,13 +165,13 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <Row>
+      <Row id="pwa">
           <Col>
             <hr style={Space} className="mx-auto w-25" />
           </Col>
       </Row>
 
-      <Row id="pwa" className='pt-3 pb-3'>
+      <Row className='pt-3 pb-3 mt-4'>
       <Col xs={6} className="d-flex align-items-center justify-content-center">
           <div className="w-75">
           <h2>PWA Text Editor</h2>
@@ -186,13 +186,13 @@ export default function Projects() {
         </Col>
       </Row>
 
-      <Row>
+      <Row id="teamgenerator">
           <Col>
             <hr style={Space} className="mx-auto w-25" />
           </Col>
       </Row>
 
-      <Row id="teamgenerator" className='mt-5 pt-3 pb-3'>
+      <Row className='mt-5 pt-3 pb-3'>
       <Col xs={6}>
         <img style={Images} src={project7example} alt="placeholder" />
         </Col>
